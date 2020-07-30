@@ -1,5 +1,5 @@
 # sqlite
-##Connecting  Databse using python
+#Connecting  Databse using python
 **Creating DataBase**
 *Select the table from db*
 1.Select Queries
