@@ -10,4 +10,4 @@
 
 # Extract and load the database using python 
 Transform into dataframe 
-Fruther to Analyize data
+
