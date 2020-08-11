@@ -1,0 +1,55 @@
+﻿SQL
+
+
+CREATE TABLE PETS(
+   ID   INT              NOT NULL,
+   NAME VARCHAR (20),
+   WEIGHT VARCHAR(20),
+   AGE    INT  ,
+  TYPE    INT ,
+  OWNER_ID    INT       NOT NULL
+   CREATE_DATE   DATE,       
+   PRIMARY KEY (ID,OWNER_ID)
+);
+
+
+CREATE TABLE OWNERS(
+   ID   INT              NOT NULL,
+   NAME VARCHAR (20)    NOT NULL,
+   ADDRESS VARCHAR(20)  NOT NULL,
+   CITY    VARCHAR(20) ,
+  STATE    VARCHAR(20)     NOT NULL ,
+  ZIP   INT       NOT NULL
+   COUNTRY    VARCHAR(20)    NOT NULL,       
+   PRIMARY KEY (ID)
+);
+
+
+
+
+2.        Select * from PETS;
+           Select * from OWNERS;
+
+
+3.    Select NAME, AGE from PETS
+           WHERE COLOR = WHITE AND AGE > 8;
+
+
+4   Select OWNERS.NAME, PETS.TYPE from OWNERS
+      INNER JOIN PETS
+       ON PETS.ID = OWNERS.ID 
+    WHERE TYPE IS NULL;
+
+
+5.    Select  NAME, AGE 
+     from OWNERS
+          JOIN PETS
+       ON PETS.ID = OWNERS.ID 
+    ORDER BY AGE DESC ;
+
+
+6.    Select  NAME, TYPE 
+     from OWNERS
+          JOIN PETS
+       ON PETS.ID = OWNERS.ID 
+    WHERE TYPE >= 1 ;
